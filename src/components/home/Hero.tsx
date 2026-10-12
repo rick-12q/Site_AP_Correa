@@ -24,7 +24,7 @@ function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contato"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#2f5d50] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#24493e]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#2f5d50] px-6 py-3.5 text-sm font-semibold !text-white transition hover:bg-[#24493e]"
             >
               Agendar atendimento
               <ArrowRight size={17} />
