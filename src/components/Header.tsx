@@ -119,7 +119,7 @@ function Header() {
 
           <Link
             to="/contato"
-            className="rounded-full bg-[#2f5d50] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#24493e]"
+            className="rounded-full bg-[#2f5d50] px-5 py-2.5 text-sm font-medium !text-white transition hover:bg-[#24493e]"
           >
             Agendar
           </Link>
@@ -225,7 +225,7 @@ function Header() {
               <Link
                 to="/contato"
                 onClick={closeMobileMenu}
-                className="mt-5 rounded-full bg-[#2f5d50] px-5 py-3 text-center text-sm font-medium text-white"
+                className="mt-5 rounded-full bg-[#2f5d50] px-5 py-3 text-center text-sm font-medium !text-white"
               >
                 Agendar atendimento
               </Link>
