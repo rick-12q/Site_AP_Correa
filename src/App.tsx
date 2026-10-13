@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import MainLayout from './layouts/MainLayout'
 import Clinica from './pages/Clinica'
 import Contato from './pages/Contato'
@@ -16,52 +17,30 @@ import Reiki from './pages/terapias/Reiki'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
+      <ScrollToTop />
+
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
 
           <Route path="/odontologia" element={<Odontologia />} />
-          <Route
-            path="/odontologia/limpeza"
-            element={<Limpeza />}
-          />
-          <Route
-            path="/odontologia/restauracao"
-            element={<Restauracao />}
-          />
-          <Route
-            path="/odontologia/canal"
-            element={<Canal />}
-          />
-          <Route
-            path="/odontologia/ortodontia"
-            element={<Ortodontia />}
-          />
+          <Route path="/odontologia/limpeza" element={<Limpeza />} />
+          <Route path="/odontologia/restauracao" element={<Restauracao />} />
+          <Route path="/odontologia/canal" element={<Canal />} />
+          <Route path="/odontologia/ortodontia" element={<Ortodontia />} />
 
           <Route path="/terapias" element={<Terapias />} />
-          <Route
-            path="/terapias/reiki"
-            element={<Reiki />}
-          />
-          <Route
-            path="/terapias/acupuntura"
-            element={<Acupuntura />}
-          />
-          <Route
-            path="/terapias/auriculoterapia"
-            element={<Auriculoterapia />}
-          />
-          <Route
-            path="/terapias/moxabustao"
-            element={<Moxabustao />}
-          />
+          <Route path="/terapias/reiki" element={<Reiki />} />
+          <Route path="/terapias/acupuntura" element={<Acupuntura />} />
+          <Route path="/terapias/auriculoterapia" element={<Auriculoterapia />} />
+          <Route path="/terapias/moxabustao" element={<Moxabustao />} />
 
           <Route path="/clinica" element={<Clinica />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>
       </MainLayout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

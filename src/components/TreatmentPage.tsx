@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import AppointmentButton from './AppointmentButton'
 
 type TreatmentPageProps = {
   category: string
@@ -47,13 +48,10 @@ function TreatmentPage({
               {description}
             </p>
 
-            <Link
-              to="/contato"
-              className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#315c4f] px-6 py-3.5 text-sm font-semibold !text-white transition duration-300 hover:bg-[#23463c]"
-            >
+            <AppointmentButton className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#315c4f] px-6 py-3.5 text-sm font-semibold !text-white transition duration-300 hover:bg-[#23463c]">
               Agendar atendimento
               <ArrowRight size={17} />
-            </Link>
+            </AppointmentButton>
           </div>
 
           <div className="overflow-hidden rounded-[2rem]">
@@ -79,7 +77,8 @@ function TreatmentPage({
               <h2 className="max-w-3xl text-3xl font-semibold leading-[1.15] tracking-tight text-[#24312c] sm:text-4xl lg:text-5xl">
                 Cuidado pensado para
                 <span className="text-[#68736e]">
-                  {' '}suas necessidades.
+                  {' '}
+                  suas necessidades.
                 </span>
               </h2>
 
@@ -146,14 +145,17 @@ function TreatmentPage({
             </p>
           </div>
 
-          <Link
-            to="/contato"
-            style={{ color: '#24312c' }}
+          <AppointmentButton
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold transition duration-300 hover:bg-[#dfe9e4]"
           >
-            Entrar em contato
-            <ArrowRight size={17} />
-          </Link>
+            <span style={{ color: '#24312c' }}>
+              Entrar em contato
+            </span>
+            <ArrowRight
+              size={17}
+              style={{ color: '#24312c' }}
+            />
+          </AppointmentButton>
         </div>
       </section>
     </main>
